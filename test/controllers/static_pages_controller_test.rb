@@ -13,19 +13,19 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get team" do
-    get static_pages_team_url
+    get team_path
     assert_response :success
     assert_select "title", "#{@base_title} | Team"
   end
 
   test "should get projects" do
-    get static_pages_projects_url
+    get projects_path
     assert_response :success
     assert_select "title", "#{@base_title} | Projects"
   end
 
   test "should get contact" do
-    get static_pages_contact_url
+    get contact_path
     assert_response :success
     assert_select "title", "#{@base_title} | Contact"
   end
